@@ -30,6 +30,103 @@
         <div class="form-head-text">Person Address Form</div>
         <a href="../HTML/home.html"><img class="form-head-image" src="../assets/cancelButton.png" alt="logo"></a>
     </div>
+
+<!-- UC-3 - Add Form Input Fields to the Address Book Form UI  -->
+
+
+<div class="form-data">
+    <div class="row-content">
+    <label for="name" class="label text">Full Name</label><br>
+    <input type="text" class="input" id="name" name="name" placeholder="Your Name..." required>
+    </div>
+    <div class="row-content">
+    <label for="address" class="label text">Address</label><br>
+    <textarea name="address" id="address" placeholder="Your Address..." required></textarea>
+    </div>
+    <div class="row-content">
+    <div class="column-data">
+        <div class="column-content">
+        <label for="city" class="label text">City</label>
+        <br>
+        <select name="city" id="city" required>
+            <option selected disabled hidden value="Select City">Select City</option>
+            <option value="Agra">Agra</option>
+            <option value="Aurangabad">Aurangabad</option>
+            <option value="Bhopal">Bhopal</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Chiplun">Chiplun</option>
+            <option value="Dapoli">Dapoli</option>
+            <option value="Dwarka">Dwarka</option>
+            <option value="Faridabad">Faridabad</option>
+            <option value="Ghaziabad">Ghaziabad</option>
+            <option value="Gurgaon">Gurgaon</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Hubli">Hubli</option>
+            <option value="Indore">Indore</option>
+            <option value="Jammu">Jammu</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Lucknow">Lucknow</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Mandawa">Mandawa</option>
+            <option value="Nagpur">Nagpur</option>
+            <option value="Noida">Noida</option>
+            <option value="Ooty">Ooty</option>
+            <option value="Patna">Patna</option>
+            <option value="Pune">Pune</option>
+            <option value="Rajkot">Rajkot</option>
+            <option value="Surat">Surat</option>
+            <option value="Ujjain">Ujjain</option>
+            <option value="Vadodara">Vadodara</option>   
+        </select>
+        </div>
+        <div class="column-content">
+        <label for="state" class="label text">State</label>
+        <br>
+        <select name="state" id="state">
+            <option selected disabled hidden value="Select State">Select State</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jammu & Kashmir">Jammu & Kashmir</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+        </select>
+        </div>
+        <div class="column-content">
+        <label for="zip" class="label text">Zip code</label><br>
+        <input type="text" class="input zipcode" id="zip" name="zip" placeholder="Your Zipcode..." required>
+        </div>
+    </div>
+    </div>
+    <div class="row-content">
+        <label for="phoneNumber" class="label text">Phone Number</label>
+        <br>
+        <input type="tel" class="input" id="phoneNumber" name="phoneNumber" placeholder="Your phone number..."required>
+    </div>
 </form>
 </div>
 </body>
