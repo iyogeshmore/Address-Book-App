@@ -75,10 +75,29 @@ window.addEventListener("DOMContentLoaded", (event) => {
 };
 
 // <!-- UC-6 - On clicking Submit Button to the following:  -->
+// <!-- UC-8 - Ability to Add the Address Book Entry into an Address Book List and store it in Local Storage -->
 
-function save() {
+function save ()  {     //Added UC-8
+    try {
+    let contact = createContact();
+    console.log(contact);
+    createAndUpdateStorage(contact);
+    } catch (error) {
+    alert(error);
+    }
+};
+
+const createContact = () => { 
     let contact = new Contact();
-    contact.id = Math.random();
+    contact.id = id();
+    function id() {
+        var id =  Math.floor(Math.random()*100);
+        if (JSON.parse(localStorage.getItem("ContactList")).find(x =>x.id === id)){
+            id();
+        }else{
+            return id;  
+        }
+    }
 
     try {
     contact.name = getInputValueById("#name");
@@ -123,7 +142,8 @@ function save() {
     }
 
     alert(contact.toString());     // Added UC-7
-};
+    return contact;     //Added UC-8
+};   
 
 const setTextValue = (id, value) => {
     const element = document.querySelector(id);
