@@ -64,3 +64,64 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
 
 });
+
+// <!-- UC-6 - On clicking Submit Button to the following:  -->
+
+function save() {
+    let contact = new Contact();
+    contact.id = Math.random();
+
+    try {
+    contact.name = getInputValueById("#name");
+    } catch (error) {
+    setTextValue(".name-error", error);
+    throw error;
+    }
+
+    try {
+    contact.phoneNumber = getInputValueById("#phoneNumber");
+    } catch (error) {
+    setTextValue(".tel-error", error);
+    throw error;
+    }
+
+    try {
+    contact.address = getInputValueById("#address");
+    } catch (error) {
+    setTextValue(".address-error", error);
+    throw error;
+    }
+    
+    let city = getInputValueById("#city");
+    if (city != "Select City") {
+    contact.city = city;
+    } else {
+    throw "Please select city";
+    }
+
+    let state = getInputValueById("#state");
+    if (state != "Select State") {
+    contact.state = state;
+    } else {
+    throw "Please select state";
+    }
+
+    try {
+    contact.zip = getInputValueById("#zip");
+    } catch (error) {
+    setTextValue(".zip-error", error);
+    throw error;
+    }
+
+    console.log(contact.toString());
+}
+
+const setTextValue = (id, value) => {
+    const element = document.querySelector(id);
+    element.textContent = value;
+};
+
+function getInputValueById(property) {
+    let value = document.querySelector(property).value;
+    return value;
+}
