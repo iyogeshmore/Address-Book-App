@@ -2,56 +2,66 @@
 
 window.addEventListener("DOMContentLoaded", (event) => {
 
-    const setTextValue = (id, value) => {
-        const element = document.querySelector(id);
-        element.textContent = value;
+// <!-- UC-7 - Populate the Address Book Contact Class and capture the user Entry using getters and setters -->
+
+    ValidateName();
+    ValidatePhoneNumber();
+    ValidateAddress();
+    validateZipcode();
+});
+
+    const ValidateName = () => {     // Added UC-7
+        const name = document.querySelector("#name");
+        name.addEventListener("input", function () {
+        if (name.value.length == 0) {
+            setTextValue(".name-error", "");
+            return;
+        }
+        try {
+            new Contact().name = name.value;
+            setTextValue(".name-error", "");
+        } catch (error) {
+            setTextValue(".name-error", error);
+        }
+        });   
     };
 
-    const name = document.querySelector("#name");
-    name.addEventListener("input", function () {
-    if (name.value.length == 0) {
-        setTextValue(".name-error", "");
-        return;
-    }
-    try {
-        new Contact().name = name.value;
-        setTextValue(".name-error", "");
-    } catch (error) {
-        setTextValue(".name-error", error);
-    }
-    });
+    const ValidateAddress = () => {     // Added UC-7
+        const address = document.querySelector("#address");
+        address.addEventListener("input", function () {
+        if (address.value.length == 0) {
+            setTextValue(".address-error", "");
+            return;
+        }
+        try {
+            new Contact().address = address.value;
+            setTextValue(".address-error", "");
+        } catch (error) {
+            setTextValue(".address-error", error);
+        }
+        });
+    };
 
-    const address = document.querySelector("#address");
-    address.addEventListener("input", function () {
-    if (address.value.length == 0) {
-        setTextValue(".address-error", "");
-        return;
-    }
-    try {
-        new Contact().address = address.value;
-        setTextValue(".address-error", "");
-    } catch (error) {
-        setTextValue(".address-error", error);
-    }
-    });
-
-    const zip = document.querySelector("#zip");
-    zip.addEventListener("input", function () {
-    if (zip.value.length == 0) {
-        setTextValue(".zip-error", "");
-        return;
-    }
-    try {
-        new Contact().zip = zip.value;
-        setTextValue(".zip-error", "");
-    } catch (error) {
-        setTextValue(".zip-error", error);
-    }
-    });
-
-    const phoneNumber = document.querySelector("#phoneNumber");
-    phoneNumber.addEventListener("input", function () {
-    if (phoneNumber.value.length == 0) {
+    const validateZipcode = () => {     // Added UC-7
+        const zip = document.querySelector("#zip");
+        zip.addEventListener("input", function () {
+        if (zip.value.length == 0) {
+            setTextValue(".zip-error", "");
+            return;
+        }
+        try {
+            new Contact().zip = zip.value;
+            setTextValue(".zip-error", "");
+        } catch (error) {
+            setTextValue(".zip-error", error);
+        }
+        });
+    };
+        
+    const ValidatePhoneNumber = () => {     // Added UC-7
+        const phoneNumber = document.querySelector("#phoneNumber");
+        phoneNumber.addEventListener("input", function () {
+        if (phoneNumber.value.length == 0) {
         setTextValue(".tel-error", "");
         return;
     }
@@ -62,8 +72,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         setTextValue(".tel-error", error);
     }
     });
-
-});
+};
 
 // <!-- UC-6 - On clicking Submit Button to the following:  -->
 
@@ -113,8 +122,8 @@ function save() {
     throw error;
     }
 
-    console.log(contact.toString());
-}
+    alert(contact.toString());     // Added UC-7
+};
 
 const setTextValue = (id, value) => {
     const element = document.querySelector(id);
