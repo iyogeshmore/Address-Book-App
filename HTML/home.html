@@ -26,10 +26,65 @@
     <div class="header-content person-header">
     <div class="person-detail-text">
         Employee Details
-        <div class="person-count">10</div>
+        <div class="person-count">3</div>
     </div>
     <a href="../HTML/address_book_form.html" class="add-button">
         <img src="../Assets/add-24px.svg" alt="">Add Person</a>
+    </div>
+
+<!-- UC 3 – Ability to view Person Address Book details in a Tabular Format -->
+
+    <div class="table-main">
+    <table id="table-display" class="table">
+    <tr>
+        <th>Fullname</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip Code</th>
+        <th>Phone Number</th>
+        <th>Actions</th>
+    </tr>
+
+    <tr>
+        <td>Rajat Nikam</td>
+        <td>Old Goa</td>
+        <td>Goa</td>
+        <td> Maharashtra</td>
+        <td>403 001</td>
+        <td>91 8840044286</td>
+        <td>
+        <img onclick="remove(this)" alt="delete"src="../Assets/delete-black-18dp.svg">
+        <img onclick="update(this)" alt="edit" src="../Assets/create-black-18dp.svg"  >
+        </td>
+    </tr>
+
+    <tr>
+        <td>Akshar Hate</td>
+        <td>Kathivakkam</td>
+        <td>Chennai</td>
+        <td> Tamil Nadu</td>
+        <td>600 057</td>
+        <td>91 8087813812</td>
+        <td>
+        <img onclick="remove(this)" alt="delete"src="../Assets/delete-black-18dp.svg">
+        <img onclick="update(this)" alt="edit" src="../Assets/create-black-18dp.svg"  >
+        </td>
+    <tr>
+            
+        <td>Yogesh More</td>
+        <td>Panvel</td>
+        <td>Mumbai</td>
+        <td> Maharashtra</td>
+        <td>410 206</td>
+        <td>91 8850055197</td>
+        <td>
+            <img onclick="remove(this)" alt="delete"src="../Assets/delete-black-18dp.svg">
+            <img onclick="update(this)" alt="edit" src="../Assets/create-black-18dp.svg"  >
+            </td>
+    </tr>
+    </tr>
+    </table>
     </div>
 </div>
 </body>
