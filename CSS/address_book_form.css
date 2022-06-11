@@ -168,10 +168,42 @@ select {
     padding: 16px 10px;
 }
 
- /* uc 4 */
+/* <!-- UC-4 - Add Form Validations --> */
+
 error-output {
     margin-left: px;
     font-size: 16px;
     font-style: italic;
     color: red;
+}
+
+/* <!-- UC-5 - Add Submit and Reset Button at the Bottom of the Form --> */
+
+.buttons-contact {
+    margin-top: 30px;
+    display: flex;
+    justify-content: right;    
+}
+
+.button {
+    background: #dfd6d6 0% 0% no-repeat padding-box;
+    border: 1px solid rgb(109, 102, 102);
+    border-radius: 6px;
+    opacity: 1;
+    font: normal normal normal 20px/26px Montserrat;
+    letter-spacing: 0px;
+    color: #42515f;
+    opacity: 1;
+    padding: 10px 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.button-submit{
+    margin-right: 50px;
+}
+
+.button:hover{
+    box-shadow: 6px 12px 18px rgba(33, 113, 225, 0.3);
 }
